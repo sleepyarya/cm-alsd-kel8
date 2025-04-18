@@ -65,12 +65,22 @@ public class SiakadMain {
                     Penilaian penilaian1 = new Penilaian();
                     penilaian1.tampilNilai(nilai);
                     break;
+
                 case 5:
                     System.out.print("\nMasukkan NIM yang ingin dicari : ");
                     String nim = sc.nextLine(); 
                     KelolaData cariData = new KelolaData();
                     cariData.cariMahasiswa(nim, mhs);
-                    break;             
+                    break;   
+                
+                case 0:
+                    System.out.println("=== Keluar dari Program ===");
+                    break;
+
+                default: 
+                    System.out.println("Input tidak valid");
+                    continue;
+                    
             }
         } while (pilihan != 0);
 
