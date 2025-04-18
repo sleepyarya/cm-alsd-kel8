@@ -8,8 +8,8 @@ public class Mahasiswa {
     }
 
     void tampilMahasiswa(Mahasiswa[] mhs) {
-        System.out.printf("| %-15s | %-20s | %-12s |\n", "NIM", "Nama", "Prodi");
-        System.out.println("-------------------------------------------------");
+        System.out.printf("| %-15s | %-20s | %-18s |\n", "NIM", "Nama", "Prodi");
+        System.out.println("---------------------------------------------------------------");
         for (int i = 0; i < mhs.length; i++) {
             System.out.printf("| %-15s | %-20s | %-12s |\n", mhs[i].NIM, mhs[i].nama, mhs[i].prodi);
         }

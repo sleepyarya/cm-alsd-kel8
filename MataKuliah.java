@@ -10,7 +10,7 @@ public class MataKuliah {
 
     void tampilMataKuliah(MataKuliah[] matkul){
         System.out.printf("| %-10s | %-20s | %-8s |\n", "Kode MK", "Nama", "SKS");
-        System.out.println("---------------------------------------------------");
+        System.out.println("------------------------------------------------");
         for (int i = 0; i < matkul.length; i++) {
             System.out.printf("| %-10s | %-20s | %-8s |\n", matkul[i].kodeMK, matkul[i].namaMK, matkul[i].sks);
         }

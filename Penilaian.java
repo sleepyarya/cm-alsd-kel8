@@ -24,7 +24,7 @@ public class Penilaian {
 
     void tampilNilai(Penilaian[] nilai) {
         System.out.printf("| %-30s | %-35s | %-12s |\n", "Nama", "Mata Kuliah", "Nilai Akhir");
-        System.out.println("------------------------------------------------------------------------------");
+        System.out.println("---------------------------------------------------------------------------------------");
         for (int i = 0; i < nilai.length; i++) {
             System.out.printf("| %-30s | %-35s | %-12s |\n", nilai[i].mahasiswa.nama, nilai[i].mataKuliah.namaMK,
                     nilai[i].nilaiAkhir);

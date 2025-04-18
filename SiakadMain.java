@@ -27,7 +27,7 @@ public class SiakadMain {
 
         int pilihan;
         do {
-            System.out.println("=== MENU SISTEM AKADEMIK ===");
+            System.out.println("\n=== MENU SISTEM AKADEMIK ===");
             System.out.println("1. Tampilkan Daftar Mahasiswa");
             System.out.println("2. Tampilkan Daftar Mata Kuliah");
             System.out.println("3. Tampilkan Data Penilaian");
@@ -35,23 +35,42 @@ public class SiakadMain {
             System.out.println("5. Cari Mahasiswa Berdasarkan NIM");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
+
             pilihan = sc.nextInt();
+            sc.nextLine();
 
             switch (pilihan) {
                 case 1:
+                    System.out.println("\n=== Daftar Mahasiswa ===");
                     Mahasiswa mahasiswa = new Mahasiswa("", "", "");
                     mahasiswa.tampilMahasiswa(mhs);
                     break;
 
                 case 2:
+                    System.out.println("\n=== Daftar Mata Kuliah ===");
                     MataKuliah mataKuliah = new MataKuliah("", "", 0);
                     mataKuliah.tampilMataKuliah(matkul);
                     break;
 
                 case 3:
+                    System.out.println("\n=== Data Penilaian ===");
                     Penilaian penilaian = new Penilaian();
                     penilaian.tampilNilai(nilai);
+                    break;
 
+                case 4:
+                    System.out.println("\n=== Data Setelah Diurutkan ===");
+                    KelolaData urutkanpenilaianData = new KelolaData();
+                    urutkanpenilaianData.UrutkanPenilaian(nilai);
+                    Penilaian penilaian1 = new Penilaian();
+                    penilaian1.tampilNilai(nilai);
+                    break;
+                case 5:
+                    System.out.print("\nMasukkan NIM yang ingin dicari : ");
+                    String nim = sc.nextLine(); 
+                    KelolaData cariData = new KelolaData();
+                    cariData.cariMahasiswa(nim, mhs);
+                    break;             
             }
         } while (pilihan != 0);
 
